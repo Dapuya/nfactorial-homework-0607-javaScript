@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+</head>
+
+
+<!-- this website doesnt have any css thats why pls do not be scared :) -->
+
+
+<body>
+<h1 id="name"></h1>
+
+<div>
+    <h3 id="numberOfStudents"></h3>
+</div>
+
+<div id="menu">
+    <ul>
+        <a href="#historyText"><li id="history"></li></a>
+        <a href="#facultiesList"><li id="faculties"></li></a>
+        <a href="#staffInfo"><li id="staff"></li></a>
+        <a href="#disciplinesList"><li id="disciplines"></li></a>
+    </ul>
+</div>
+
+<h2>History</h2>
+<div>
+    <p id="historyText"></p>
+</div>
+
+<h2>Faculties</h2>
+<div>
+    <ul id="facultiesList">
+        <li id="CS"></li>
+        <li id="Business"></li>
+        <li id="OaG"></li>
+    </ul>
+</div>
+
+
+<h2>Staff</h2>
+<div>
+    <p id="staffInfo"></p>
+</div>
+
+<h2>Disciplines</h2>
+<div>
+    <ul id="disciplinesList">
+        <li id="PP"></li>
+    </ul>
+</div>
+
+
+<script>
+    const name = document.getElementById("name")
+    name.innerHTML = '<h1>University named after Dalida</h1>';
+
+
+    menu = ["History", "Faculties", "Staff", "Disciplines"];
+
+    facultiesList = ["Computer Science", "Business", "Oil and Gas"]
+
+    const history = document.getElementById('history')
+    history.innerHTML = `<li>${menu[0]}</li>`
+
+    let faculties = document.getElementById('faculties')
+    faculties.innerHTML = `<li>${menu[1]}</li>`
+
+    let staff = document.getElementById('staff')
+    staff.innerHTML = `<li>${menu[2]}</li>`
+
+    let disciplines = document.getElementById('disciplines')
+    disciplines.innerHTML = `<li>${menu[3]}</li>`
+
+    let historyText = 'Our university was build in 2022 by Dalida Yerkuli. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
+
+    let historyTextID = document.getElementById('historyText')
+    historyTextID.innerText = historyText
+
+    let compScience = document.getElementById('CS')
+    compScience.innerHTML = `<li>${facultiesList[0]}</li>`
+
+    let business = document.getElementById('Business')
+    business.innerHTML = `<li>${facultiesList[1]}</li>`
+
+    let oilGas = document.getElementById('OaG')
+    oilGas.innerHTML = `<li>${facultiesList[2]}</li>`
+
+    const staffInfo = document.getElementById('staffInfo')
+    staffInfo.innerHTML = '<p>Some information about staff. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>'
+
+    let numberOfCurrentStudents = document.getElementById('numberOfStudents')
+    let students = "2452"
+    if (students > 1999){
+        numberOfCurrentStudents.innerHTML = '<h1>Large</h1>'
+    }else if (students < 2000){
+        numberOfCurrentStudents.innerHTML = '<h1>Medium</h1>'
+    }else if (students === 2452){
+        numberOfCurrentStudents.innerHTML = '<h1>Undefined</h1>'
+    }
+
+    let disciplines1 = ["Web Dev", "IOS Dev" ];
+    let disciplines2 = ["Principles Of Programming", "Computer Networks", ...disciplines1];
+
+
+    let disciplinesList = document.getElementById("disciplinesList")
+    for( let i = 0; i< disciplines2.length; i++){
+       disciplines2[i]
+    }
+
+
+</script>
+
+</body>
+</html>
